@@ -1,5 +1,5 @@
 # Summary
 
-* [Introduction](README.md)
+* [ホーム](README.md)
 
 * [HonKit](/HonKit/README.md)
