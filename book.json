@@ -1,3 +1,7 @@
 {
-    "root": "./docs"
+    "root": "./docs",
+    "language": "ja",
+    "plugins": [
+        "hide-published-with"
+    ]
 }

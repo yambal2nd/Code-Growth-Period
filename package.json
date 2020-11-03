@@ -19,6 +19,11 @@
   },
   "homepage": "https://github.com/yambal2nd/Code-Growth-Period#readme",
   "devDependencies": {
-    "honkit": "^3.6.8"
+    "honkit": "^3.6.8",
+    "gitbook-plugin-hide-published-with": "^0.0.1"
+  },
+  "dependencies": {
+    "i": "^0.3.6",
+    "npm": "^6.14.8"
   }
 }
