@@ -1,6 +1,7 @@
 {
     "root": "./docs",
     "language": "ja",
+    "title": "Code成長期",
     "plugins": [
         "hide-published-with"
     ]
