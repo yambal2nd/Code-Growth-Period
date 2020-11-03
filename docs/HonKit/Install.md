@@ -54,12 +54,27 @@ and all other kinds of inline markup ...
 ```
 
 ## プレビューする　
-## ローカルでサーブする
+### ローカルでサーブする
 ```
 yarn run honkit serve
 ```
 
-## ローカルでビルドする
+### ローカルでビルドする
 ```
 yarn run honkit build
+```
+
+## npm-run-scriptsとして定義
+```package.json
+  "scripts": {
+    "build": "honkit build",
+    "serve": "honkit serve"
+  },
+```
+この構成の後、npm runコマンドを使用できます。
+```
+# Build 
+npm run build
+# Start to server
+npm run serve
 ```
