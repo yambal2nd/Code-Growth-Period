@@ -1,0 +1,288 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>HonKitでビルドしたコンテンツを公開する · Code成長期</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="HonKitでビルドしたコンテンツを公開する">
+        <meta name="generator" content="HonKit 3.6.8">
+        <meta name="author" content="June YAMAMOTO">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="Install.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索ワードを入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    ホーム
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    HonKit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Install.html">
+            
+                <a href="Install.html">
+            
+                    
+                    HonKitのセットアップとインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="develop.html">
+            
+                <a href="develop.html">
+            
+                    
+                    HonKitでビルドしたコンテンツを公開する
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            HonKitで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >HonKitでビルドしたコンテンツを公開する</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="honkit&#x3067;&#x30D3;&#x30EB;&#x30C9;&#x3057;&#x305F;&#x30B3;&#x30F3;&#x30C6;&#x30F3;&#x30C4;&#x3092;&#x516C;&#x958B;&#x3059;&#x308B;">HonKit&#x3067;&#x30D3;&#x30EB;&#x30C9;&#x3057;&#x305F;&#x30B3;&#x30F3;&#x30C6;&#x30F3;&#x30C4;&#x3092;&#x516C;&#x958B;&#x3059;&#x308B;</h1>
+<h2 id="netlify">Netlify</h2>
+<p>Netlify&#x306F;&#x3001;&#x9759;&#x7684;&#x30B5;&#x30A4;&#x30C8;&#x3092;&#x30DB;&#x30B9;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;Web&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3067;&#x3059;&#x3002;<a href="../GLOSSARY.html#git" class="glossary-term" title="Git&#xFF08;&#x30AE;&#x30C3;&#x30C8;&#xFF09;&#x306F;&#x3001;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306E;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x306A;&#x3069;&#x306E;&#x5909;&#x66F4;&#x5C65;&#x6B74;&#x3092;&#x8A18;&#x9332;&#x30FB;&#x8FFD;&#x8DE1;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x5206;&#x6563;&#x578B;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x7BA1;&#x7406;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x3067;&#x3042;&#x308B;&#x3002;">Git</a>&#x3078;&#x306E;Push&#xFF08;&#x5909;&#x66F4;&#xFF09;&#x3092;&#x691C;&#x77E5;&#x3057;&#x3066;&#x81EA;&#x52D5;&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x3057;&#x3066;&#x304F;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x3064;&#x307E;&#x308A;&#x3001;<a href="../GLOSSARY.html#markdown" class="glossary-term" title="Markdown&#xFF08;&#x30DE;&#x30FC;&#x30AF;&#x30C0;&#x30A6;&#x30F3;&#xFF09;&#x306F;&#x3001;&#x6587;&#x7AE0;&#x306E;&#x66F8;&#x304D;&#x65B9;&#x3067;&#x3059;&#x3002;&#x30C7;&#x30B8;&#x30BF;&#x30EB;&#x6587;&#x66F8;&#x3092;&#x6D3B;&#x7528;&#x3059;&#x308B;&#x65B9;&#x6CD5;&#x3068;&#x3057;&#x3066;&#x8003;&#x6848;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;&#x7279;&#x5FB4;&#x306F;&#x3001;">Markdown</a>&#x3092;&#x7DE8;&#x96C6;&#x3057;Push&#x3059;&#x308B;&#x3068;&#x3001;&#x305D;&#x308C;&#x3092;&#x30C8;&#x30EA;&#x30AC;&#x30FC;&#x306B;&#x30D3;&#x30EB;&#x30C9;&#x304C;&#x5B9F;&#x884C;&#x3055;&#x308C;&#x3001;&#x516C;&#x958B;&#x307E;&#x3067;&#x81EA;&#x7684;&#x306B;&#x884C;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x4EEE;&#x306B;&#x3001;<a href="../GLOSSARY.html#honkit" class="glossary-term" title="HonKit &#x306F; GitBook &#x304B;&#x3089; Fork &#x3057;&#x3066;&#x4F5C;&#x3089;&#x308C;&#x305F;Markdown&#x304B;&#x3089;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x30DA;&#x30FC;&#x30B8;&#x3084;&#x66F8;&#x7C4D;&#x3092;&#x4F5C;&#x6210;&#x3059;&#x308B;&#x30C4;&#x30FC;&#x30EB;&#x3067;&#x3059;">HonKit</a>&#x306E;&#x30D3;&#x30EB;&#x30C9;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x304C;<code>yarn run build</code>&#x3067;&#x3001;&#x51FA;&#x529B;&#x5148;&#x304C;<code>_book</code>&#x306A;&#x3089;&#x3070;&#x3001;Build setting &#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;
+<img src="netlify_build_setting.png" alt="Netlify Build Setting"></p>
+<h2 id="github-pages">GitHub Pages</h2>
+<p><a href="../GLOSSARY.html#github" class="glossary-term" title="GitHub&#xFF08;&#x30AE;&#x30C3;&#x30C8;&#x30CF;&#x30D6;&#xFF09;&#x306F;&#x3001;&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x958B;&#x767A;&#x306E;&#x30D7;&#x30E9;&#x30C3;&#x30C8;&#x30D5;&#x30A9;&#x30FC;&#x30E0;&#x3067;&#x3042;&#x308A;&#x3001;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x30DB;&#x30B9;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x3059;&#x308B;&#x3002;&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x7BA1;&#x7406;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306B;&#x306F;Git&#x3092;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x3002;">GitHub</a> Pages&#x306F;<a href="../GLOSSARY.html#github" class="glossary-term" title="GitHub&#xFF08;&#x30AE;&#x30C3;&#x30C8;&#x30CF;&#x30D6;&#xFF09;&#x306F;&#x3001;&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x958B;&#x767A;&#x306E;&#x30D7;&#x30E9;&#x30C3;&#x30C8;&#x30D5;&#x30A9;&#x30FC;&#x30E0;&#x3067;&#x3042;&#x308A;&#x3001;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x30DB;&#x30B9;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x3059;&#x308B;&#x3002;&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x7BA1;&#x7406;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306B;&#x306F;Git&#x3092;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x3002;">GitHub</a>&#x304C;&#x63D0;&#x4F9B;&#x3059;&#x308B;&#x30DB;&#x30B9;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3067;&#x3001;&#x30A6;&#x30A7;&#x30D6;&#x30DA;&#x30FC;&#x30B8;&#x3092;&#x30A4;&#x30F3;&#x30BF;&#x30FC;&#x30CD;&#x30C3;&#x30C8;&#x4E0A;&#x306B;&#x516C;&#x958B;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x3068;&#x3066;&#x3082;&#x4FBF;&#x5229;&#x306A;&#x6A5F;&#x80FD;&#x306A;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;&#x516C;&#x958B;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x306B;&#x306F;<code>/root</code>&#x3068;<code>/docs</code>&#x3057;&#x304B;&#x9078;&#x629E;&#x3067;&#x304D;&#x307E;&#x305B;&#x3093;&#x3002;
+&#x5BFE;&#x3057;&#x3066;<a href="../GLOSSARY.html#honkit" class="glossary-term" title="HonKit &#x306F; GitBook &#x304B;&#x3089; Fork &#x3057;&#x3066;&#x4F5C;&#x3089;&#x308C;&#x305F;Markdown&#x304B;&#x3089;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x30DA;&#x30FC;&#x30B8;&#x3084;&#x66F8;&#x7C4D;&#x3092;&#x4F5C;&#x6210;&#x3059;&#x308B;&#x30C4;&#x30FC;&#x30EB;&#x3067;&#x3059;">HonKit</a>&#x306E;&#x65B9;&#x306F;<code>/_book</code>&#x56FA;&#x5B9A;&#x3068;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;
+&#x305D;&#x3053;&#x3067;&#x3061;&#x3087;&#x3063;&#x3068;&#x5C0F;&#x7D30;&#x5DE5;&#x304C;&#x5FC5;&#x8981;&#x3067;&#x3059;&#x3002;</p>
+<h3 id="gh-pages&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3092;&#x8FFD;&#x52A0;"><code>gh-pages</code>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3092;&#x8FFD;&#x52A0;</h3>
+<p><code>gh-pages</code>&#x306F;&#x6307;&#x5B9A;&#x3057;&#x305F;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3092;<code>gh-pages</code>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;Push&#x3059;&#x308B;&#x3068;&#x3044;&#x3046;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3067;&#x3059;</p>
+<pre><code>yarn add gh-pages --dev
+</code></pre><p>&#x4EE5;&#x4E0B;&#x306E;npm-run-scripts&#x306E;&#x5834;&#x5408;&#x3001;<code>_book</code>&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3092;<code>gh-pages</code>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;Push&#x3059;&#x308B;&#x3053;&#x3068;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;</p>
+<pre><code>  &quot;scripts&quot;: {
+    &quot;deploy&quot;: &quot;gh-pages -d _book&quot;,
+  }
+</code></pre><p><a href="../GLOSSARY.html#github" class="glossary-term" title="GitHub&#xFF08;&#x30AE;&#x30C3;&#x30C8;&#x30CF;&#x30D6;&#xFF09;&#x306F;&#x3001;&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x958B;&#x767A;&#x306E;&#x30D7;&#x30E9;&#x30C3;&#x30C8;&#x30D5;&#x30A9;&#x30FC;&#x30E0;&#x3067;&#x3042;&#x308A;&#x3001;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x30DB;&#x30B9;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x3059;&#x308B;&#x3002;&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x7BA1;&#x7406;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306B;&#x306F;Git&#x3092;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x3002;">GitHub</a> Pages&#x306E;&#x8A2D;&#x5B9A;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;&#x3067;&#x3057;&#x3087;&#x3046;
+<img src="gh-pages.png" alt="GitHub Pages"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Install.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: HonKitのセットアップとインストール">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"HonKitでビルドしたコンテンツを公開する","title":"HonKitでビルドしたコンテンツを公開する","level":"1.2.2","depth":2,"previous":{"title":"HonKitのセットアップとインストール","level":"1.2.1","depth":2,"path":"HonKit/Install.md","ref":"./HonKit/Install.md","articles":[]},"dir":"ltr"},"config":{"plugins":["hide-published-with"],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"June YAMAMOTO","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Code成長期","language":"ja","gitbook":"*","description":"調べた事とか"},"file":{"path":"HonKit/develop.md","mtime":"2020-11-03T13:08:27.662Z","type":"markdown"},"gitbook":{"version":"3.6.8","time":"2020-11-03T15:31:15.267Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

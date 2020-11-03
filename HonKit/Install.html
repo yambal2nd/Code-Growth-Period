@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="develop.html" />
+    
     
     <link rel="prev" href="./" />
     
@@ -114,12 +116,25 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="install.html">
+        <li class="chapter active" data-level="1.2.1" data-path="Install.html">
             
-                <a href="install.html">
+                <a href="Install.html">
             
                     
                     HonKitのセットアップとインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="develop.html">
+            
+                <a href="develop.html">
+            
+                    
+                    HonKitでビルドしたコンテンツを公開する
             
                 </a>
             
@@ -217,7 +232,7 @@ and all other kinds of inline markup ...
 <pre><code>yarn run honkit serve
 </code></pre><h3 id="&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x3067;&#x30D3;&#x30EB;&#x30C9;&#x3059;&#x308B;">&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x3067;&#x30D3;&#x30EB;&#x30C9;&#x3059;&#x308B;</h3>
 <pre><code>yarn run honkit build
-</code></pre><h3 id="npm-run-scripts&#x3068;&#x3057;&#x3066;&#x5B9A;&#x7FA9;">npm-run-scripts&#x3068;&#x3057;&#x3066;&#x5B9A;&#x7FA9;</h3>
+</code></pre><h2 id="npm-run-scripts&#x3068;&#x3057;&#x3066;&#x5B9A;&#x7FA9;">npm-run-scripts&#x3068;&#x3057;&#x3066;&#x5B9A;&#x7FA9;</h2>
 <pre><code class="lang-package.json">  &quot;scripts&quot;: {
     &quot;build&quot;: &quot;honkit build&quot;,
     &quot;serve&quot;: &quot;honkit serve&quot;
@@ -255,10 +270,14 @@ npm run serve
 
             
                 
-                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: HonKit">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: HonKit">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="develop.html" class="navigation navigation-next " aria-label="Next page: HonKitでビルドしたコンテンツを公開する">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -267,7 +286,7 @@ npm run serve
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"HonKitでページをビルドするまで","title":"HonKitのセットアップとインストール","level":"1.2.1","depth":2,"previous":{"title":"HonKit","level":"1.2","depth":1,"path":"HonKit/README.md","ref":"HonKit/README.md","articles":[{"title":"HonKitのセットアップとインストール","level":"1.2.1","depth":2,"path":"HonKit/install.md","ref":"HonKit/install.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["hide-published-with","livereload"],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"hide-published-with":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"June YAMAMOTO","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Code成長期","language":"ja","gitbook":"*","description":"調べた事とか"},"file":{"path":"HonKit/install.md","mtime":"2020-11-03T12:32:03.285Z","type":"markdown"},"gitbook":{"version":"3.6.8","time":"2020-11-03T12:32:21.134Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"HonKitでページをビルドするまで","title":"HonKitのセットアップとインストール","level":"1.2.1","depth":2,"next":{"title":"HonKitでビルドしたコンテンツを公開する","level":"1.2.2","depth":2,"path":"HonKit/develop.md","ref":"./HonKit/develop.md","articles":[]},"previous":{"title":"HonKit","level":"1.2","depth":1,"path":"HonKit/README.md","ref":"./HonKit/README.md","articles":[{"title":"HonKitのセットアップとインストール","level":"1.2.1","depth":2,"path":"HonKit/Install.md","ref":"./HonKit/Install.md","articles":[]},{"title":"HonKitでビルドしたコンテンツを公開する","level":"1.2.2","depth":2,"path":"HonKit/develop.md","ref":"./HonKit/develop.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["hide-published-with"],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"June YAMAMOTO","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Code成長期","language":"ja","gitbook":"*","description":"調べた事とか"},"file":{"path":"HonKit/Install.md","mtime":"2020-11-03T12:32:40.635Z","type":"markdown"},"gitbook":{"version":"3.6.8","time":"2020-11-03T15:31:15.267Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -278,10 +297,6 @@ npm run serve
     
         
         <script src="../gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
