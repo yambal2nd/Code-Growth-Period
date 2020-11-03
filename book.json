@@ -2,6 +2,8 @@
     "root": "./docs",
     "language": "ja",
     "title": "Code成長期",
+    "description": "調べた事とか",
+    "author": "June YAMAMOTO",
     "plugins": [
         "hide-published-with"
     ]
