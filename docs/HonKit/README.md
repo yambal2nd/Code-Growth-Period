@@ -2,6 +2,9 @@
 
 > HonKit は GitBook から Fork して作られたMarkdownからドキュメントページや書籍を作成するツールです<br/>[Web Scratch](https://efcl.info/2020/06/19/githon/)
 
+<p class="author-comment">HonKitはMarkdownから、HTMLやPDFやePubなどを生成するツール。CMSの一種といえばそうだけど「出版」に特化しており、今どきのCMSに期待される諸所の機能、例えば、FeedやSitemapやOGP...などのネットで参照されるための仕掛け（SEO?）はデフォルトでは組み込まれていない。モチベーションの項でも言及しているが、開発ドキュメントのビューに利用できるが、その運用フローについてHonGitがナニかを担えるわけでもなく、そういう視点ではGitBookの方が目的に叶うかもしれない。フロントエンジニアとしてはNode.jsで動くCMS（Apache Licence）として興味深い。
+Autherは [jser.info](http://jser.info/)のazaさん</p>
+
 ## 参照
 - [honkit/honkit](https://github.com/honkit/honkit)
 - [HonKit Toolchain Documentation
